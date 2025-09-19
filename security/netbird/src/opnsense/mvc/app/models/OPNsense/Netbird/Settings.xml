@@ -15,6 +15,19 @@
                 <maximum>65535</maximum>
                 <ValidationMessage>Please specify a valid port.</ValidationMessage>
             </wireguardPort>
+            <logLevel type="OptionField">
+                <Required>Y</Required>
+                <default>info</default>
+                <Multiple>N</Multiple>
+                <OptionValues>
+                    <fatal value="fatal">Fatal</fatal>
+                    <error value="error">Error</error>
+                    <warn value="warn">Warn</warn>
+                    <info value="info">Info</info>
+                    <debug value="debug">Debug</debug>
+                    <trace value="trace">Trace</trace>
+                </OptionValues>
+            </logLevel>
         </general>
         <firewall>
             <allowConfig type="BooleanField">
@@ -62,19 +75,5 @@
                 <Required>Y</Required>
             </rosenpassPermissive>
         </postquantum>
-        <syslog>
-            <logLevel type="OptionField">
-                <Required>Y</Required>
-                <Default>info</Default>
-                <OptionValues>
-                    <fatal>fatal</fatal>
-                    <error>error</error>
-                    <warn>warn</warn>
-                    <info>info</info>
-                    <debug>debug</debug>
-                    <trace>trace</trace>
-                </OptionValues>
-            </logLevel>
-        </syslog>
     </items>
 </model>
